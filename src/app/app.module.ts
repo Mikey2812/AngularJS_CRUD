@@ -16,6 +16,7 @@ import { CourseseditComponent } from './components/admin/courses/coursesedit/cou
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
+import { CoursedetailComponent } from './components/admin/courses/coursedetail/coursedetail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
     HomeComponent,
     CoursesComponent,
     CourseaddComponent,
-    CourseseditComponent
+    CourseseditComponent,
+    CoursedetailComponent
   ],
   imports: [
     BrowserModule,

@@ -25,10 +25,16 @@ export class CoursesComponent implements OnInit {
         star: new FormControl(),
     });
 
+    onDetail(id:number): void {
+        window.location.href = '/admin/courses/details/'+id;
+    }
+
     onDelete(id:number): void {
-        this.c.deleteCourse(id).subscribe(res => {
-            this.toastr.success('Success', 'Delete Course');
-            this.ngOnInit();
-        })
+        if(confirm("Are you sure you want to do that?") == true) {
+            this.c.deleteCourse(id).subscribe(res => {
+                this.toastr.success('Success', 'Delete Course');
+                this.ngOnInit();
+            });
+        }
     }
 }

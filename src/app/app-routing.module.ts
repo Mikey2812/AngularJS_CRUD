@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CoursesComponent } from './components/admin/courses/courses.component';
 import { CourseaddComponent } from './components/admin/courses/courseadd/courseadd.component';
 import { CourseseditComponent } from './components/admin/courses/coursesedit/coursesedit.component';
+import { CoursedetailComponent } from './components/admin/courses/coursedetail/coursedetail.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     {path: 'about', component: AboutComponent},
 
     {path: 'admin/courses', component: CoursesComponent},
+    {path: 'admin/courses/details/:id', component: CoursedetailComponent},
     {path: 'admin/courses/add', component: CourseaddComponent},
     {path: 'admin/courses/edit/:id', component: CourseseditComponent},
 ];

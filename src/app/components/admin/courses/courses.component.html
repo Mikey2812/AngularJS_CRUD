@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor='let course of courses;' >
+            <tr *ngFor='let course of courses;' (click)="onDetail(course.id)">
                 <td class="align-middle"><span>{{course.id}}</span></td>
                 <td class="align-middle"><span>{{course.title}}</span></td>
                 <td class="align-middle"><span>{{course.author}}</span></td>
@@ -32,7 +32,6 @@
                 <th>ID</th>
                 <th>Title</th>
                 <th>Author</th>
-                <th>Image</th>
                 <th>Time</th>
                 <th>Star</th>
                 <th>Action</th>
