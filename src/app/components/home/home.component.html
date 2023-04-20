@@ -1,0 +1,11 @@
+<h3>Top rate</h3>      
+
+<div class="container"> 
+    <div class="row" >    
+        <div class="col-4" *ngFor='let movie of movies; let i=index;' (click)="redirect('movie/{{movie.id}}')">
+            <h4>{{i+1}}- {{movie.title}} - {{movie.vote_average}}</h4>
+            <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/{{movie.backdrop_path}}" alt="">
+            <p>{{movie.overview}}</p>
+        </div>
+    </div>   
+</div>    

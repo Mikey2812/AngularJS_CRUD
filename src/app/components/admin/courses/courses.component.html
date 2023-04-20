@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-3">
+        <h3 class="m-0">Courses List</h3>
+        <a class="btn btn-info" href="admin/courses/add"><i class="fa-solid fa-plus"></i></a>
+    </div>
+    <table id="myTable" class="table table-striped mx-auto text-center" style="width:100%">
+        <thead>
+            <tr>
+                <th style="width: 10%;">ID</th>
+                <th style="width: 30%;">Title</th>
+                <th style="width: 30%;">Author</th>
+                <th style="width: 10%;">Time</th>
+                <th style="width: 10%;">Star</th>
+                <th style="width: 10%;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let course of courses;' >
+                <td class="align-middle"><span>{{course.id}}</span></td>
+                <td class="align-middle"><span>{{course.title}}</span></td>
+                <td class="align-middle"><span>{{course.author}}</span></td>
+                <td class="align-middle"><span>{{course.time}}</span></td>
+                <td class="align-middle"><span>{{course.star}}</span></td>
+                <td class="align-middle">
+                    <a class="btn btn-warning me-2" routerLink="./edit/{{course.id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a class="btn btn-danger" href="javascript:void(0)" (click)="onDelete(course.id)"><i class="fa-solid fa-xmark"></i></a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Image</th>
+                <th>Time</th>
+                <th>Star</th>
+                <th>Action</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
